@@ -38,7 +38,7 @@
         <%-- Navigation top level --%>
         <ul class="nav navbar-nav global-nav hidden-xs" role="navigation">
             <% loop $Pages %>    
-                <li data-id="$ID">
+                <li data-id="$ID" class="$LinkingMode">
                     <a href="$GlobalNavLink" data-link="$Link" title="Go to the $Title.XML page">$MenuTitle.XML</a>
                 </li>
             <% end_loop %>
@@ -55,7 +55,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" role="navigation">
                 <% loop $GlobalNavChildren %>
-                    <li class="">
+                    <li class="$LinkingMode">
                         <a data-parent-id="$ParentID" href="$GlobalNavLink" title="Go to the $Title.XML page" class="<% if $HighlightMenu %>btn btn-default <% end_if %>">$MenuTitle.XML</a>
                     </li>
                 <% end_loop %>
